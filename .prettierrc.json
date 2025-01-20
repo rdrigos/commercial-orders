@@ -1,0 +1,29 @@
+{
+  "printWidth": 120,
+  "endOfLine": "lf",
+  "overrides": [
+    {
+      "files": ["**.ts", "**.tsx"],
+      "options": {
+        "tabWidth": 2,
+        "useTabs": false,
+        "singleQuote": true,
+        "semi": true,
+        "requirePragma": false,
+        "bracketSpacing": true,
+        "trailingComma": "all",
+        "arrowParens": "always",
+        "parser": "typescript"
+      }
+    },
+    {
+      "files": ["**.json"],
+      "options": {
+        "tabWidth": 2,
+        "useTabs": false,
+        "parser": "json"
+      }
+    }
+  ],
+  "plugins": ["prettier-plugin-tailwindcss"]
+}
