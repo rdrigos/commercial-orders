@@ -1,5 +1,15 @@
+import { Label } from '@/components/ui/label';
 import React from 'react';
+import { ThemeSelector } from './_components/theme-selector';
 
 export default function Settings(): React.JSX.Element {
-  return <p>Settings page</p>;
+  return (
+    <div className="space-y-6">
+      <Label className="text-2xl font-semibold">Settings</Label>
+      <section className="space-y-2">
+        <Label className="text-lg font-semibold">Theme</Label>
+        <ThemeSelector />
+      </section>
+    </div>
+  );
 }
