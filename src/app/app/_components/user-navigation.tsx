@@ -1,3 +1,5 @@
+'use client';
+
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import {
@@ -8,11 +10,14 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { LogOut, SettingsIcon } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 import React from 'react';
 
 // TODO - Place the user data when the context is created
 
 export function UserNavigation(): React.JSX.Element {
+  const router = useRouter();
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -29,12 +34,12 @@ export function UserNavigation(): React.JSX.Element {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-32">
-        <DropdownMenuItem>
+        <DropdownMenuItem onClick={() => router.push('/app/settings')}>
           <SettingsIcon />
           Settings
         </DropdownMenuItem>
         <DropdownMenuSeparator />
-        <DropdownMenuItem>
+        <DropdownMenuItem onClick={() => router.push('/')}>
           <LogOut />
           Log out
         </DropdownMenuItem>
