@@ -29,7 +29,7 @@ export function LanguageSelector(): React.JSX.Element {
           <SelectItem value="en-us">
             <Label>English</Label>
           </SelectItem>
-          <SelectItem value="pt-br">
+          <SelectItem value="pt-br" disabled>
             <Label>Portuguese</Label>
           </SelectItem>
         </SelectContent>
