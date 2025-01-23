@@ -1,5 +1,3 @@
-'use client';
-
 import { ThemeProvider } from '@/context/theme-context';
 import React from 'react';
 
